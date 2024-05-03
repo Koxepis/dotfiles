@@ -71,7 +71,7 @@ format = "[$symbol]($style)"
 
 [git_status]
 format = '([ \( $all_status$ahead_behind\)]($style) )'
-style = 'bold green'
+# style = 'bold white'
 conflicted = '[ confliced=${count}](red) '
 up_to_date = '[󰘽 up-to-date](green) '
 untracked = '[󰋗 untracked=${count}](red) '
