@@ -41,7 +41,8 @@ require("lazy").setup({
       -- "kanagawa-dragon",
       -- "rose-pine",
       -- "nord",
-      "gotham",
+      -- "gotham",
+      "oxocarbon",
     },
   },
 

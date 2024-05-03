@@ -1,24 +1,13 @@
 return {
   -- Other plugins
-  { "whatyouhide/vim-gotham" },
-  --
+  -- { "whatyouhide/vim-gotham" },
+  { "nyoom-engineering/oxocarbon.nvim" },
+
   -- TODO: Set colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gotham",
-      -- Enable italic comments
-      ui = {
-        italics = {
-          comments = true,
-        },
-      },
-      -- Enable transparent background
-      transparent_window = true,
-      -- Set theme style (e.g., "night" or "day")
-      theme = "night",
-      -- Set terminal background transparency
-      terminal_bg = "transparent",
+      colorscheme = "oxocarbon",
     },
   },
 
@@ -92,20 +81,28 @@ return {
   --   end,
   -- },
 
-  -- NOTE: USED GOTHAM THEME
+  -- WARN: DISABLED GOTHAM THEME
+  -- {
+  --   "vim-gotham",
+  --   name = "gotham",
+  --   lazy = false, -- make sure to load the colorscheme immediately
+  --   priority = 1000, -- ensure it loads after other plugins
+  --   config = function()
+  --     vim.g.gotham_enable_italic_comment = 1
+  --     vim.g.gotham_enable_sp_icons = 1
+  --     vim.g.gotham_color_overrides = {
+  --       background = "NONE", -- Set this to "NONE" for transparent background
+  --     }
+  --     vim.cmd("colorscheme gotham")
+  --   end,
+  -- },
+  --
+
   {
-    "vim-gotham",
-    name = "gotham",
+    "nyoom-engineering/oxocarbon.nvim",
+    name = "oxocarbon",
     lazy = false, -- make sure to load the colorscheme immediately
     priority = 1000, -- ensure it loads after other plugins
-    config = function()
-      vim.g.gotham_enable_italic_comment = 1
-      vim.g.gotham_enable_sp_icons = 1
-      vim.g.gotham_color_overrides = {
-        background = "NONE", -- Set this to "NONE" for transparent background
-      }
-      vim.cmd("colorscheme gotham")
-    end,
   },
 
   -- ... (your existing plugins)
