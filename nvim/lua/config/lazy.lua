@@ -19,7 +19,10 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
-    { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+    {
+      "nvim-lualine/lualine.nvim",
+      -- dependencies = { "nvim-tree/nvim-web-devicons" }
+    },
     -- { import = "plugins.lualine" },
   },
   defaults = {
