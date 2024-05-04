@@ -1,2 +1,2 @@
 starship/cache/
-nvim/lazy-lock.json
+nvim/*.json
