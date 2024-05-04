@@ -15,7 +15,7 @@ $character"""
 # ---
 
 [os]
-format = '[$symbol](bold white) '   
+format = '[$symbol]($style) '   
 disabled = false
 
 [os.symbols]
@@ -25,15 +25,15 @@ Ubuntu = ''
 Macos = '󰀵'
 
 [username]
-style_user = 'green bold'
-style_root = 'black bold'
+# style_user = 'green bold'
+# style_root = 'black bold'
 format = '[$user]($style)'
 disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format = '@[$hostname](bold yellow) '
+format = '@[$hostname]($style) '
 disabled = false
 
 [nodejs]
@@ -51,7 +51,7 @@ read_only = '  '
 format = 'at [$path]($style)[$read_only]($read_only_style) '
 
 [character]
-success_symbol = "[❯](green)"
+success_symbol = "[❯]($style)"
 error_symbol = "[❯](red)"
 vicmd_symbol = "[❮](green)"
 
