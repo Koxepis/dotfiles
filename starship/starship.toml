@@ -8,8 +8,7 @@ $git_status\
 $git_commit\
 $git_metrics\
 $fill\
-$nodejs\
-$cmd_duration $jobs $time $os\
+$cmd_duration $nodejs $jobs $time $os\
 $line_break\
 $character"""
 
@@ -26,15 +25,15 @@ Ubuntu = ''
 Macos = '󰀵'
 
 [username]
-style_user = 'white bold'
+style_user = 'green bold'
 style_root = 'black bold'
-format = '[$user]($style) '
+format = '[$user]($style)'
 disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format = 'on [$hostname](bold yellow) '
+format = '@[$hostname](bold yellow) '
 disabled = false
 
 [nodejs]
@@ -52,7 +51,7 @@ read_only = '  '
 format = 'at [$path]($style)[$read_only]($read_only_style) '
 
 [character]
-success_symbol = "[❯](purple)"
+success_symbol = "[❯](green)"
 error_symbol = "[❯](red)"
 vicmd_symbol = "[❮](green)"
 
@@ -70,7 +69,7 @@ number_threshold = 1
 format = "[$symbol]($style)"
 
 [git_status]
-format = '([ \( $all_status$ahead_behind\)]($style) )'
+format = '([ \($all_status$ahead_behind\)]($style) )'
 # style = 'bold white'
 conflicted = '[ confliced=${count}](red) '
 up_to_date = '[󰘽 up-to-date](green) '
@@ -108,6 +107,9 @@ symbol = " "
 disabled = false
 style = "bold white"
 format = "[$time]($style)"
+
+[docker_context]
+format = 'via [🐋 $context](blue bold)'
 
 [custom.stunnel]
 when = "ps aux | grep stunnel | grep -v grep"
