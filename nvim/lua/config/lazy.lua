@@ -17,12 +17,14 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    { import = "lazyvim.plugins.extras.editor.mini-diff" },
+    { import = "lazyvim.plugins.extras.editor.navic" },
     -- import/override with your plugins
     { import = "plugins" },
-    {
-      "nvim-lualine/lualine.nvim",
-      -- dependencies = { "nvim-tree/nvim-web-devicons" }
-    },
+    -- {
+    --   "nvim-lualine/lualine.nvim",
+    --   -- dependencies = { "nvim-tree/nvim-web-devicons" }
+    -- },
     -- { import = "plugins.lualine" },
   },
   defaults = {
@@ -62,13 +64,13 @@ require("lazy").setup({
         "tokyonight",
         "habamax",
         "kanagawa-dragon",
-        "rose-pine",
+        -- "rose-pine",
         "nord",
       },
     },
   },
 })
 
-local lualine = require("lualine")
-local lualine_config = require("plugins.lualine")
-lualine.setup(lualine_config.config())
+-- local lualine = require("lualine")
+-- local lualine_config = require("plugins.lualine")
+-- lualine.setup(lualine_config.config())

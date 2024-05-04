@@ -7,4 +7,12 @@ local opt = vim.opt
 opt.winblend = 10
 opt.number = true -- Show line numbers
 opt.cursorline = true -- Highlight the current line
--- Add more options as needed
+
+-- Set termguicolors
+vim.opt.termguicolors = true
+
+-- Preserve transparency when entering Neovim
+vim.cmd("hi Normal ctermbg=NONE guibg=NONE")
+vim.cmd("hi NonText ctermbg=NONE guibg=NONE")
+vim.cmd("hi EndOfBuffer ctermbg=NONE guibg=NONE")
+vim.cmd("hi SignColumn ctermbg=NONE guibg=NONE")
