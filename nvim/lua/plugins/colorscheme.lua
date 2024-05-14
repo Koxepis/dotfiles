@@ -1,13 +1,14 @@
 return {
   -- Other plugins
   -- { "whatyouhide/vim-gotham" },
-  { "nyoom-engineering/oxocarbon.nvim" },
+  -- { "nyoom-engineering/oxocarbon.nvim" },
+  { "Shatur/neovim-ayu" },
 
   -- TODO: Set colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "oxocarbon",
+      colorscheme = "ayu-mirage",
     },
   },
 
@@ -98,12 +99,30 @@ return {
   -- },
   --
 
+  -- WARN: DISABLE OXOCARBON
+  -- {
+  --   "nyoom-engineering/oxocarbon.nvim",
+  --   name = "oxocarbon",
+  --   lazy = false, -- make sure to load the colorscheme immediately
+  --   priority = 1000, -- ensure it loads after other plugins
+  -- },
+
   {
-    "nyoom-engineering/oxocarbon.nvim",
-    name = "oxocarbon",
+    "Shatur/neovim-ayu",
+    name = "ayu",
     lazy = false, -- make sure to load the colorscheme immediately
     priority = 1000, -- ensure it loads after other plugins
+    opts = {
+      transparent = true, -- Enable transparency
+      styles = {
+        italic = true, -- Enable italic style
+        bold = true, -- Enable bold style
+      },
+    },
+    config = function()
+      -- Set the winblend option to disable the background color
+      vim.opt.winblend = 0
+    end,
   },
-
   -- ... (your existing plugins)
 }
