@@ -8,7 +8,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "ayu-mirage",
+      colorscheme = "poimandres",
     },
   },
 
@@ -107,21 +107,46 @@ return {
   --   priority = 1000, -- ensure it loads after other plugins
   -- },
 
+  -- WARN: DISABLE AYU
+  -- {
+  --   "Shatur/neovim-ayu",
+  --   name = "ayu",
+  --   lazy = false, -- make sure to load the colorscheme immediately
+  --   priority = 1000, -- ensure it loads after other plugins
+  --   opts = {
+  --     terminal = true,
+  --     styles = {
+  --       italic = true, -- Enable italic style
+  --       bold = true, -- Enable bold style
+  --     },
+  --   },
+  --   config = function()
+  --     -- Set the winblend option to disable the background color
+  --     vim.opt.winblend = 0
+  --   end,
+  -- },
+
   {
-    "Shatur/neovim-ayu",
-    name = "ayu",
-    lazy = false, -- make sure to load the colorscheme immediately
-    priority = 1000, -- ensure it loads after other plugins
-    opts = {
-      transparent = true, -- Enable transparency
-      styles = {
-        italic = true, -- Enable italic style
-        bold = true, -- Enable bold style
-      },
-    },
+    "olivercederborg/poimandres.nvim",
+    name = "poimandres",
+    lazy = false,
+    priority = 1000,
     config = function()
-      -- Set the winblend option to disable the background color
-      vim.opt.winblend = 0
+      require("poimandres").setup({
+        -- leave this setup function empty for default config
+        -- or refer to the configuration section
+        -- for configuration options
+        bold_vert_split = true, -- use bold vertical separators
+        dim_nc_background = false, -- dim 'non-current' window backgrounds
+        disable_background = false, -- disable background
+        disable_float_background = false, -- disable background for floats
+        disable_italics = false, -- disable italics
+      })
+    end,
+
+    -- optionally set the colorscheme within lazy config
+    init = function()
+      vim.cmd("colorscheme poimandres")
     end,
   },
   -- ... (your existing plugins)
