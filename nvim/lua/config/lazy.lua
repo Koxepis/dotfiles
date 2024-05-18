@@ -1,5 +1,4 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
--- local lualine = require("plugins.lua-line.lua-line")
 if not vim.loop.fs_stat(lazypath) then
   -- bootstrap lazy.nvim
   -- stylua: ignore
@@ -21,11 +20,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.editor.navic" },
     -- import/override with your plugins
     { import = "plugins" },
-    -- {
-    --   "nvim-lualine/lualine.nvim",
-    --   -- dependencies = { "nvim-tree/nvim-web-devicons" }
-    -- },
-    -- { import = "plugins.lualine" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -44,7 +38,9 @@ require("lazy").setup({
       -- "rose-pine",
       -- "nord",
       -- "gotham",
-      "oxocarbon",
+      -- "oxocarbon",
+      -- "ayu-mirage",
+      "poimandres",
     },
   },
 
@@ -64,13 +60,9 @@ require("lazy").setup({
         "tokyonight",
         "habamax",
         "kanagawa-dragon",
-        -- "rose-pine",
+        "rose-pine",
         "nord",
       },
     },
   },
 })
-
--- local lualine = require("lualine")
--- local lualine_config = require("plugins.lualine")
--- lualine.setup(lualine_config.config())
