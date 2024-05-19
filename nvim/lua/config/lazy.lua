@@ -21,7 +21,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.ui.alpha" },
     -- import/override with your plugins
     { import = "plugins" },
-    -- { "xiyaowong/transparent.nvim" },
+    { "xiyaowong/transparent.nvim" },
+    { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -34,19 +35,11 @@ require("lazy").setup({
   },
   install = {
     colorscheme = {
-      -- "tokyonight",
-      -- "habamax",
-      -- "kanagawa-dragon",
-      -- "rose-pine",
-      -- "nord",
-      -- "gotham",
-      -- "oxocarbon",
-      -- "ayu-mirage",
-      "poimandres",
+      "nightfox",
     },
   },
 
-  checker = { enabled = true }, -- automatically check for plugin updates
+  checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
@@ -64,6 +57,10 @@ require("lazy").setup({
         "kanagawa-dragon",
         "rose-pine",
         "nord",
+        "poimandres",
+        "ayu",
+        "dashboard",
+        "nordic",
       },
     },
   },
