@@ -2,15 +2,23 @@ return {
   "nvimdev/dashboard-nvim",
   lazy = false, -- As https://github.com/nvimdev/dashboard-nvim/pull/450, dashboard-nvim shouldn't be lazy-loaded to properly handle stdin.
   opts = function()
+    --     local logo = [[
+    --  ___   ___  ______  __     __  ______  ______  ________  ___  ______
+    -- /___/\/__/\/_____/\/__/\ /__/\/_____/\/_____/\/_______/\/__/\/_____/\
+    -- \::.\ \\ \ \:::_ \ \ \::\\:.\ \::::_\/\:::_ \ \__.::._\/\::\ \::::_\/_
+    --  \:: \/_) \ \:\ \ \ \_\::_\:_\/\:\/___/\:(_) \ \ \::\ \  \:_\/\:\/___/\
+    --   \:. __  ( (\:\ \ \ \_\/__\_\_/\::___\/\: ___\/ _\::\ \__     \_::._\:\
+    --    \: \ )  \ \\:\_\ \ \ \ \ \::\ \:\____/\ \ \  /__\::\__/\      /____\:\
+    --     \__\/\__\/ \_____\/\_\/  \__\/\_____\/\_\/  \________\/      \_____\/
+    --     ]]
     local logo = [[
- ___   ___  ______  __     __  ______  ______  ________  ___  ______     
-/___/\/__/\/_____/\/__/\ /__/\/_____/\/_____/\/_______/\/__/\/_____/\    
-\::.\ \\ \ \:::_ \ \ \::\\:.\ \::::_\/\:::_ \ \__.::._\/\::\ \::::_\/_   
- \:: \/_) \ \:\ \ \ \_\::_\:_\/\:\/___/\:(_) \ \ \::\ \  \:_\/\:\/___/\  
-  \:. __  ( (\:\ \ \ \_\/__\_\_/\::___\/\: ___\/ _\::\ \__     \_::._\:\ 
-   \: \ )  \ \\:\_\ \ \ \ \ \::\ \:\____/\ \ \  /__\::\__/\      /____\:\
-    \__\/\__\/ \_____\/\_\/  \__\/\_____\/\_\/  \________\/      \_____\/
-    ]]
+██╗░░██╗░█████╗░██╗░░██╗███████╗██████╗░██╗██╗░██████╗
+██║░██╔╝██╔══██╗╚██╗██╔╝██╔════╝██╔══██╗██║╚█║██╔════╝
+█████═╝░██║░░██║░╚███╔╝░█████╗░░██████╔╝██║░╚╝╚█████╗░
+██╔═██╗░██║░░██║░██╔██╗░██╔══╝░░██╔═══╝░██║░░░░╚═══██╗
+██║░╚██╗╚█████╔╝██╔╝╚██╗███████╗██║░░░░░██║░░░██████╔╝
+╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░░░░╚═╝░░░╚═════╝░
+      ]]
 
     logo = string.rep("\n", 8) .. logo .. "\n\n"
 
@@ -25,20 +33,41 @@ return {
         header = vim.split(logo, "\n"),
         -- stylua: ignore
         center = {
-          { action = LazyVim.telescope("files"),                                    desc = " Find File",       icon = " ", key = "f" },
-          { action = "ene | startinsert",                                        desc = " New File",        icon = " ", key = "n" },
-          { action = "Telescope oldfiles",                                       desc = " Recent Files",    icon = " ", key = "r" },
-          { action = "Telescope live_grep",                                      desc = " Find Text",       icon = " ", key = "g" },
+          -- { action = "ene | startinsert",                        desc = " New File",        icon = " ", key = "n" },
+          -- { action = "Telescope live_grep",                      desc = " Find Text",       icon = " ", key = "g" },
+          -- { action = "Lazy",                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
+          { action = LazyVim.telescope("files"),                 desc = " Find File",       icon = " ", key = "f" },
+          { action = "Telescope oldfiles",                       desc = " Recent Files",    icon = " ", key = "r" },
           { action = [[lua LazyVim.telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
-          { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
-          { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },
-          { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
-          { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
+          { action = 'lua require("persistence").load()',        desc = " Restore Session", icon = " ", key = "s" },
+          { action = "LazyExtras",                               desc = " Lazy Extras",     icon = " ", key = "x" },
+          { action = "qa",                                       desc = " Quit",            icon = " ", key = "q" },
         },
         footer = function()
+          local current_hour = tonumber(os.date("%H"))
+
+          -- Define the greeting variable
+          local greeting
+
+          if current_hour < 5 then
+            greeting = "    Good night, Koxepi!"
+          elseif current_hour < 12 then
+            greeting = "  󰼰 Good morning, Koxepi!"
+          elseif current_hour < 17 then
+            greeting = "    Good afternoon, Koxepi!"
+          elseif current_hour < 20 then
+            greeting = "  󰖝  Good evening, Koxepi!"
+          else
+            greeting = "  󰖔  Good night, Koxepi!"
+          end
+
           local stats = require("lazy").stats()
           local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-          return { "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
+          local count = (math.floor(stats.startuptime * 100) / 100)
+          return {
+            greeting,
+            "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms",
+          }
         end,
       },
     }
