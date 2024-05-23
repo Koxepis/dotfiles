@@ -11,8 +11,9 @@ return {
     { "<leader>uN", "<cmd>Notifications<cr>", desc = "Show Notifications" },
   },
   opts = {
-    stages = "fade_in_slide_out",
-    background_colour = "#0000004d",
+    render = "default",
+    stages = "slide",
+    -- background_colour = "#000004d",
     timeout = 1000,
     max_height = function()
       return math.floor(vim.o.lines * 0.75)
