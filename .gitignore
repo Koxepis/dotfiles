@@ -1,13 +1,9 @@
 starship/cache/
 nvim/lazy-lock.json
 nvim/lazyvim.json
-raycast/
+raycast/extensions
 image/
 btop/
 zed/
 p10k config/
 
-# git rm --cached raycast/
-# git rm --cached image/
-# git rm --cached btop/
-# git rm --cached starship/cache/
