@@ -5,6 +5,7 @@ raycast/
 image/
 btop/
 zed/
+p10k config/
 
 # git rm --cached raycast/
 # git rm --cached image/
