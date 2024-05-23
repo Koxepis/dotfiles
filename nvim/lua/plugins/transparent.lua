@@ -1,9 +1,8 @@
 return {
   "xiyaowong/transparent.nvim",
-  cmd = { "TransparentEnable", "TransparentDisable" },
+  cmd = { "TransparentToggle" },
   keys = {
-    { "<leader>u[", "<cmd>TransparentEnable<cr>", desc = "Enable Transparency" },
-    { "<leader>u]", "<cmd>TransparentDisable<cr>", desc = "Disable Transparency" },
+    { "<leader>u/", "<cmd>TransparentToggle<cr>", desc = "Toggle Transparent" },
   },
   opts = function()
     require("transparent").setup({ -- Optional, you don't have to run setup.
