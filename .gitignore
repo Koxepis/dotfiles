@@ -1,2 +1,12 @@
 starship/cache/
-nvim/*.json
+nvim/lazy-lock.json
+nvim/lazyvim.json
+raycast/
+image/
+btop/
+zed/
+
+# git rm --cached raycast/
+# git rm --cached image/
+# git rm --cached btop/
+# git rm --cached starship/cache/
