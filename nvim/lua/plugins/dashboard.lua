@@ -2,24 +2,16 @@ return {
   "nvimdev/dashboard-nvim",
   lazy = false, -- As https://github.com/nvimdev/dashboard-nvim/pull/450, dashboard-nvim shouldn't be lazy-loaded to properly handle stdin.
   opts = function()
-    --     local logo = [[
-    --  ___   ___  ______  __     __  ______  ______  ________  ___  ______
-    -- /___/\/__/\/_____/\/__/\ /__/\/_____/\/_____/\/_______/\/__/\/_____/\
-    -- \::.\ \\ \ \:::_ \ \ \::\\:.\ \::::_\/\:::_ \ \__.::._\/\::\ \::::_\/_
-    --  \:: \/_) \ \:\ \ \ \_\::_\:_\/\:\/___/\:(_) \ \ \::\ \  \:_\/\:\/___/\
-    --   \:. __  ( (\:\ \ \ \_\/__\_\_/\::___\/\: ___\/ _\::\ \__     \_::._\:\
-    --    \: \ )  \ \\:\_\ \ \ \ \ \::\ \:\____/\ \ \  /__\::\__/\      /____\:\
-    --     \__\/\__\/ \_____\/\_\/  \__\/\_____\/\_\/  \________\/      \_____\/
-    --     ]]
     local logo = [[
-██╗░░██╗░█████╗░██╗░░██╗███████╗██████╗░██╗██╗░██████╗
-██║░██╔╝██╔══██╗╚██╗██╔╝██╔════╝██╔══██╗██║╚█║██╔════╝
-█████═╝░██║░░██║░╚███╔╝░█████╗░░██████╔╝██║░╚╝╚█████╗░
-██╔═██╗░██║░░██║░██╔██╗░██╔══╝░░██╔═══╝░██║░░░░╚═══██╗
-██║░╚██╗╚█████╔╝██╔╝╚██╗███████╗██║░░░░░██║░░░██████╔╝
-╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░░░░╚═╝░░░╚═════╝░
-      ]]
-
+                                 "loaded very lazy"
+   ██╗  ██╗ ██████╗ ██╗  ██╗██╗   ██╗██╗███╗   ███╗
+   ██║ ██╔╝██╔═══██╗╚██╗██╔╝██║   ██║██║████╗ ████║
+   █████╔╝ ██║   ██║ ╚███╔╝ ██║   ██║██║██╔████╔██║
+   ██╔═██╗ ██║   ██║ ██╔██╗ ╚██╗ ██╔╝██║██║╚██╔╝██║
+██╗██║  ██╗╚██████╔╝██╔╝ ██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
+    ]]
+    -- NOTE: LOGO USING ANSI SHADOW TEXT
     logo = string.rep("\n", 8) .. logo .. "\n\n"
 
     local opts = {
@@ -33,13 +25,13 @@ return {
         header = vim.split(logo, "\n"),
         -- stylua: ignore
         center = {
-          -- { action = "ene | startinsert",                        desc = " New File",        icon = " ", key = "n" },
-          -- { action = "Telescope live_grep",                      desc = " Find Text",       icon = " ", key = "g" },
-          -- { action = "Lazy",                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
-          { action = LazyVim.telescope("files"),                 desc = " Find File",       icon = " ", key = "f" },
+          { action = "ene | startinsert",                        desc = " New File",        icon = " ", key = "n" },
           { action = "Telescope oldfiles",                       desc = " Recent Files",    icon = " ", key = "r" },
-          { action = [[lua LazyVim.telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
+          { action = LazyVim.telescope("files"),                 desc = " Find File",       icon = " ", key = "f" },
+          -- { action = "Telescope live_grep",                      desc = " Find Text",       icon = " ", key = "g" },
           { action = 'lua require("persistence").load()',        desc = " Restore Session", icon = " ", key = "s" },
+          { action = [[lua LazyVim.telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
+          -- { action = "Lazy",                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
           { action = "LazyExtras",                               desc = " Lazy Extras",     icon = " ", key = "x" },
           { action = "qa",                                       desc = " Quit",            icon = " ", key = "q" },
         },
