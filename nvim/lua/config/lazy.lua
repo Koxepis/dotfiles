@@ -16,7 +16,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.editor.mini-diff" },
-    { import = "lazyvim.plugins.extras.editor.mini-move" },
     -- import/override with your plugins
     { import = "plugins" },
     { "xiyaowong/transparent.nvim" },
@@ -44,9 +43,6 @@ require("lazy").setup({
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
-        -- "matchit",
-        -- "matchparen",
-        -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
