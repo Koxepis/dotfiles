@@ -16,7 +16,7 @@ return {
       --     noremap = true,
       --     nowait = true,
       --   },
-      width = 25,
+      width = 20,
       mappings = {
         ["<space>"] = "none",
         ["Y"] = {
