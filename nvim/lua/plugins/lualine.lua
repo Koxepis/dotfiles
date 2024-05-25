@@ -1,7 +1,7 @@
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  theme = "auto",
+  theme = "catppuccin",
   event = "VeryLazy",
   globalstatus = true,
   opts = function()

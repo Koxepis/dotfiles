@@ -33,7 +33,7 @@ require("lazy").setup({
   },
   install = {
     colorscheme = {
-      "nightfox",
+      "catppuccin",
     },
   },
 
@@ -48,6 +48,7 @@ require("lazy").setup({
         "tutor",
         "zipPlugin",
         "tokyonight",
+        "",
       },
     },
   },
