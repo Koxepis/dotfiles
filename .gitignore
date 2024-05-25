@@ -1,6 +1,8 @@
 starship/cache/
 nvim/lazy-lock.json
 nvim/lazyvim.json
+nvim/.luarc.json
+nvim/.neoconf.json
 raycast/extensions
 image/
 btop/
