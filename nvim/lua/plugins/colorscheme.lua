@@ -33,7 +33,7 @@ return {
           numbers = {},
           booleans = {},
           properties = {},
-          types = {},
+          types = { "italic" },
           operators = {},
           -- miscs = {}, -- Uncomment to turn off hard-coded styles
         },
