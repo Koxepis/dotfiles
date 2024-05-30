@@ -16,7 +16,7 @@ return {
         term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
         dim_inactive = {
           enabled = false, -- dims the background color of inactive window
-          shade = "light",
+          shade = "dark",
           percentage = 0.15, -- percentage of the shade to apply to the inactive window
         },
         no_italic = false, -- Force no italic
@@ -45,7 +45,7 @@ return {
           gitsigns = true,
           nvimtree = true,
           treesitter = true,
-          notify = true,
+          notify = false,
           mini = {
             enabled = true,
             indentscope_color = "",
@@ -87,4 +87,24 @@ return {
     end,
   },
   -- other plugins...
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = {
+      style = "moon",
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
+
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin",
+    },
+  },
 }
