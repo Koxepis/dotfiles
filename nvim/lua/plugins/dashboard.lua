@@ -12,7 +12,7 @@ return {
 ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
     ]]
     -- NOTE: LOGO USING ANSI SHADOW TEXT
-    logo = string.rep("\n", 8) .. logo .. "\n\n"
+    logo = string.rep("\n", 8) .. logo .. "\n\n\n\n\n"
 
     local opts = {
       theme = "doom",
@@ -57,6 +57,9 @@ return {
           local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
           local count = (math.floor(stats.startuptime * 100) / 100)
           return {
+            "",
+            "",
+            "",
             greeting,
             "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms",
           }
