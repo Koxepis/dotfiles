@@ -13,7 +13,7 @@ return {
   opts = {
     render = "default",
     stages = "slide",
-    -- background_colour = "#000004d",
+    background_colour = "#cba6f7",
     timeout = 1500,
     max_height = function()
       return math.floor(vim.o.lines * 0.75)
