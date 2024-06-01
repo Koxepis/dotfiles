@@ -14,13 +14,14 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.editor.mini-diff" },
     -- import/override with your plugins
     { import = "plugins" },
-    { "xiyaowong/transparent.nvim" },
+    -- { "xiyaowong/transparent.nvim" },
     { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
     { "christoomey/vim-tmux-navigator" },
+    { "SmiteshP/nvim-navic" },
+    { "lukas-reineke/indent-blankline.nvim" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -48,7 +49,7 @@ require("lazy").setup({
         "tutor",
         "zipPlugin",
         "tokyonight",
-        "",
+        "transparent",
       },
     },
   },
