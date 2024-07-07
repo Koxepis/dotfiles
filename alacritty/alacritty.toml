@@ -1,0 +1,55 @@
+import = [
+  "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 0 
+padding.y = 0
+decorations = "Transparent"
+opacity = 0.65 
+blur = false 
+option_as_alt = "Both"
+startup_mode ="SimpleFullscreen"
+
+[scrolling]
+multiplier = 1
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+normal.family = "Maple Mono NF"
+normal.style = "ExtraLight"
+
+bold.family = "Maple Mono NF"
+bold.style = "Bold"
+
+italic.family = "Maple Mono NF"
+italic.style = "Italic"
+
+bold_italic.family = "Maple Mono NF"
+bold_italic.style = "BoldItalic"
+size = 16
+
+[cursor]
+style.blinking = "Always"
+style.shape ="Block"
+vi_mode_style.shape = "Block"
+vi_mode_style.blinking = "Always"
+blink_interval = 250
+blink_timeout = 0
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+  {key = "f", mods="Super", action="ToggleSimpleFullscreen"},
+  # {key= "Tab", mods= "Control", action= "SelectNextTab"},
+]
+
+[selection]
+save_to_clipboard = true
