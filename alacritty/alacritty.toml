@@ -12,7 +12,7 @@ decorations = "ButtonLess"
 opacity = 0.65 
 blur = false 
 option_as_alt = "Both"
-startup_mode = "Maximized"
+startup_mode = "SimpleFullScreen"
 
 [scrolling]
 multiplier = 2
@@ -48,7 +48,7 @@ hide_when_typing = true
 [keyboard]
 bindings = [
   {key = "f", mods="Super", action="ToggleSimpleFullscreen"},
-  {key= "t", mods= "Control", action= "CreateNewTab"}
+  # {key= "t", mods= "Control", action= "CreateNewTab"}
 ]
 
 [selection]
