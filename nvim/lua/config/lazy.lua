@@ -22,6 +22,7 @@ require("lazy").setup({
     { "christoomey/vim-tmux-navigator" },
     { "SmiteshP/nvim-navic" },
     { "lukas-reineke/indent-blankline.nvim" },
+    { "f-person/git-blame.nvim" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
