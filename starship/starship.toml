@@ -31,19 +31,20 @@ diverged = '󱖔 '
 up_to_date = ''
 
 [username]
-style_user = 'yellow bold'
-style_root = 'yellow bold'
+style_user = '#A48CF2 bold'
+style_root = '#A48CF2 bold'
 format = '[$user]($style)'
 disabled = false
 show_always = true
 
 [hostname]
-style = 'yellow bold'
+style = '#37F499 bold'
 ssh_only = false
 format = '@[$hostname]($style) '
 disabled = false
 
 [directory]
+style= '#04D1F9'
 truncation_length = 2
 truncation_symbol = '…/'
 home_symbol = '󰋜 ~'

@@ -1,15 +1,16 @@
 import = [
-  "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
+  "~/.config/alacritty/themes/themes/eldritch.toml"
 ]
 
 [env]
 TERM = "xterm-256color"
 
 [window]
-padding.x = 10
-padding.y = 28
+padding.x = 0
+padding.y = 0
 decorations = "ButtonLess"
-opacity = 0.35
+# opacity = 0.35
+opacity = 1
 blur = false 
 option_as_alt = "Both"
 startup_mode = "SimpleFullScreen"
@@ -32,7 +33,7 @@ italic.style = "Italic"
 
 bold_italic.family = "Maple Mono NF"
 bold_italic.style = "BoldItalic"
-size = 16
+size = 14.5
 
 [cursor]
 style.blinking = "Always"
