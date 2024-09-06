@@ -50,7 +50,7 @@ require("lazy").setup({
         "tutor",
         "zipPlugin",
         "tokyonight",
-        "transparent",
+        -- "transparent",
       },
     },
   },
