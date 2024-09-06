@@ -6,11 +6,11 @@ import = [
 TERM = "xterm-256color"
 
 [window]
-padding.x = 0
-padding.y = 0
+padding.x = 10
+padding.y = 10
 decorations = "ButtonLess"
 # opacity = 0.35
-opacity = 1
+opacity = 0.97
 blur = false 
 option_as_alt = "Both"
 startup_mode = "SimpleFullScreen"
@@ -22,18 +22,20 @@ multiplier = 2
 draw_bold_text_with_bright_colors = true
 
 [font]
-normal.family = "Maple Mono NF"
-normal.style = "Light"
+normal.family = "CommitMono Nerd Font Mono"
+normal.style = "Regular"
 
-bold.family = "Maple Mono NF"
+bold.family = "CommitMono Nerd Font Mono"
 bold.style = "Bold"
 
-italic.family = "Maple Mono NF"
+italic.family = "CommitMono Nerd Font Mono"
 italic.style = "Italic"
 
-bold_italic.family = "Maple Mono NF"
+bold_italic.family = "CommitMono Nerd Font Mono"
 bold_italic.style = "BoldItalic"
-size = 14.5
+size = 14.75
+# size = 15
+
 
 [cursor]
 style.blinking = "Always"
