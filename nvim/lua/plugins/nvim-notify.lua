@@ -17,7 +17,7 @@ return {
       render = "default",
       stages = "slide",
       level = vim.log.levels.INFO,
-      background_colour = "#21222c",
+      background_colour = "NotifyBackground",
       icons = {
         ERROR = "",
         WARN = "⚠",
@@ -33,13 +33,7 @@ return {
       minimum_width = 50,
       fps = 60,
       top_down = true,
-      highlights = {
-        background = "Normal",
-        title = "Title",
-        border = "FloatBorder",
-        icon = "Special",
-      },
-      timeout = 1500,
+      timeout = 3000,
       max_height = function()
         return math.floor(vim.o.lines * 0.75)
       end,
@@ -48,6 +42,31 @@ return {
       end,
       on_open = function(win)
         vim.api.nvim_win_set_config(win, { zindex = 100 })
+        if vim.api.nvim_win_get_config(win).relative == "editor" then
+          vim.wo[win].winblend = 10
+        end
+      end,
+    })
+
+    -- Custom highlights for nvim-notify
+    vim.api.nvim_create_autocmd("ColorScheme", {
+      pattern = "*",
+      callback = function()
+        vim.api.nvim_set_hl(0, "NotifyERRORBorder", { fg = "#f16c75" })
+        vim.api.nvim_set_hl(0, "NotifyERRORIcon", { fg = "#f16c75" })
+        vim.api.nvim_set_hl(0, "NotifyERRORTitle", { fg = "#f16c75" })
+        vim.api.nvim_set_hl(0, "NotifyWARNBorder", { fg = "#f7c67f" })
+        vim.api.nvim_set_hl(0, "NotifyWARNIcon", { fg = "#f7c67f" })
+        vim.api.nvim_set_hl(0, "NotifyWARNTitle", { fg = "#f7c67f" })
+        vim.api.nvim_set_hl(0, "NotifyINFOBorder", { fg = "#04d1f9" })
+        vim.api.nvim_set_hl(0, "NotifyINFOIcon", { fg = "#04d1f9" })
+        vim.api.nvim_set_hl(0, "NotifyINFOTitle", { fg = "#04d1f9" })
+        vim.api.nvim_set_hl(0, "NotifyDEBUGBorder", { fg = "#7081d0" })
+        vim.api.nvim_set_hl(0, "NotifyDEBUGIcon", { fg = "#7081d0" })
+        vim.api.nvim_set_hl(0, "NotifyDEBUGTitle", { fg = "#7081d0" })
+        vim.api.nvim_set_hl(0, "NotifyTRACEBorder", { fg = "#a48cf2" })
+        vim.api.nvim_set_hl(0, "NotifyTRACEIcon", { fg = "#a48cf2" })
+        vim.api.nvim_set_hl(0, "NotifyTRACETitle", { fg = "#a48cf2" })
       end,
     })
 
