@@ -19,10 +19,10 @@ return {
       level = vim.log.levels.INFO,
       background_colour = "NotifyBackground",
       icons = {
-        ERROR = "",
+        ERROR = "✗",
         WARN = "⚠",
-        INFO = "ℹ",
-        DEBUG = "",
+        INFO = "",
+        DEBUG = "",
         TRACE = "✎",
       },
       time_formats = {
