@@ -32,9 +32,9 @@ return {
         -- Value is any valid attr-list value for `:help nvim_set_hl`
         comments = { italic = true, fg = "#646573" }, -- Added fg color here
         keywords = { italic = true },
-        string = { italic = true, fg = "#fefff2" },
+        strings = { fg = "#c3e88d" },
         functions = {},
-        variables = {},
+        parameter = { fg = "#ff966c" },
         -- Background styles. Can be "dark", "transparent" or "normal"
         sidebars = "dark", -- style for sidebars, see below
         floats = "dark", -- style for floating windows
@@ -82,6 +82,14 @@ return {
         -- These colors are used by mini-files.lua to show git changes
         highlights.MiniDiffSignAdd = { fg = "#f1fc79", bold = true }
         highlights.MiniDiffSignChange = { fg = "#37f499", bold = true }
+        highlights.String = { fg = "#c3e88d" }
+
+        highlights["@parameter"] = { fg = "#ff966c" }
+        -- highlights["@variable"] = { fg = "#ff966c" }
+
+        -- TSX specific (if needed)
+        highlights["@parameter.tsx"] = { fg = "#ff966c" }
+        -- highlights["@variable.tsx"] = { fg = "#ff966c" }
 
         -- highlights.Normal = { bg = "#09090d", fg = "#ebfafa" }
       end,
@@ -93,6 +101,7 @@ return {
         -- text in neovim)
         -- colors.bg = "#09090d"
         colors.comment = "#a5afc2"
+        colors.yellow = "#c3e88d"
       end,
     },
   },
