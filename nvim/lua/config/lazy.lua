@@ -17,7 +17,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.editor.mini-diff" },
     -- import/override with your plugins
     { import = "plugins" },
-    -- { "xiyaowong/transparent.nvim" },
     { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
     { "christoomey/vim-tmux-navigator" },
     { "SmiteshP/nvim-navic" },
@@ -35,7 +34,7 @@ require("lazy").setup({
   },
   install = {
     colorscheme = {
-      "catppuccin",
+      "eldritch",
     },
   },
 
@@ -49,8 +48,7 @@ require("lazy").setup({
         "tohtml",
         "tutor",
         "zipPlugin",
-        "tokyonight",
-        -- "transparent",
+        -- "tokyonight",
       },
     },
   },
