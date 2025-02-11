@@ -3,7 +3,7 @@
 add_newline = true
 continuation_prompt = "[▸▹ ](dimmed white)"
 
-format = """($nix_shell$container$fill$git_metrics\n)$cmd_duration\
+format = """($nix_shell$container$fill$git_metrics\n)$directory\
 $hostname\
 $localip\
 $shlvl\
@@ -14,10 +14,9 @@ $sudo\
 $username\
 $character"""
 
-right_format = """
+right_format = """$cmd_duration\
 $singularity\
 $kubernetes\
-$directory\
 $vcsh\
 $fossil_branch\
 $git_branch\
