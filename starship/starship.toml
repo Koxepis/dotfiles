@@ -117,7 +117,7 @@ show_always = false
 
 [directory]
 home_symbol = "⌂"
-truncation_length = 2
+truncation_length = 4
 truncation_symbol = "□ "
 read_only = " ◈"
 use_os_path_sep = true
@@ -127,7 +127,7 @@ repo_root_style = 'bold blue'
 repo_root_format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) [△](bold bright-blue)'
 
 [cmd_duration]
-format = "[◄ $duration ](italic white)"
+format = "[$duration ](italic white)"
 
 [jobs]
 format = "[$symbol$number]($style) "
@@ -171,8 +171,7 @@ format = " [$branch(:$remote_branch)]($style)"
 symbol = "[△](bold italic bright-blue)"
 style = "italic bright-blue"
 truncation_symbol = "⋯"
-truncation_length = 11
-ignore_branches = ["main", "master"]
+truncation_length = 32
 only_attached = true
 
 [git_metrics]
@@ -208,7 +207,7 @@ style = "bold bright-yellow"
 
 [nodejs]
 format = " [node](italic) [◫ ($version)](bold bright-green)"
-version_format = "${raw}"
+version_format = "($version)"
 detect_files = ["package-lock.json", "yarn.lock"]
 detect_folders = ["node_modules"]
 detect_extensions = []
