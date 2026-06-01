@@ -1,9 +1,13 @@
 starship/cache/
+goose/
+configstore/
+crush/
+devin/
+raycast/
 nvim/lazy-lock.json
 nvim/lazyvim.json
 nvim/.luarc.json
 nvim/.neoconf.json
-raycast/extensions
 image/
 btop/
 zed/
@@ -11,3 +15,4 @@ p10k config/
 iterm2/
 neofetch/
 spicetify/
+.DS_Store

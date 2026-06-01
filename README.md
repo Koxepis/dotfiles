@@ -1,17 +1,15 @@
 <div align="center">
 
-```
+<pre align="center">
 ─────────────────────────────────────
-~/.dotfiles
+             ~/.dotfiles             
 ─────────────────────────────────────
-```
+</pre>
 
 [Oxocarbon]-tuned terminal stack.
 **kitty** · **zsh / p10k** · **neovim** · **claude code** · **goose**
 
 <br/>
-
-<img src="./screenshots/nvim.png" alt="LazyVim dashboard inside kitty, Oxocarbon-tuned" width="820"/>
 
 </div>
 
@@ -79,6 +77,8 @@ Lean + Frame prompt, two lines, corner-framed. Directory truncated to the last s
 
 LazyVim base; a single custom plugin file overrides lualine into a _bubbles_ layout that mirrors the kitty active tab pill.
 
+<img src="./screenshots/nvim.png" alt="LazyVim dashboard inside kitty, Oxocarbon-tuned" width="820"/>
+<br/>
 <img src="./screenshots/nvim-status-line.png" alt="lualine bubbles statusline in NORMAL, INSERT and VISUAL modes" width="820"/>
 
 - Mode pill recolors per mode — blue / green / cyan / magenta / yellow.
@@ -117,50 +117,13 @@ A pre-tweakcc snapshot of the Claude binary lives at `~/.claude-tweakcc-backup/`
 
 ---
 
-## goose
-
-A bundle of custom skills used as submodules under `goose/skills/` — design, brand voice, code conventions, AEO, negentropy-lens, and more.
-
----
-
-## install
-
-```sh
-# clone into ~/.config
-git clone <this-repo> ~/.config
-
-# core tooling
-brew install --cask kitty
-brew install zsh neovim
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-# fonts
-brew install --cask font-maple-mono-nf
-
-# AI CLIs (optional)
-brew install --cask claude-code
-npm install -g ccstatusline tweakcc
-brew install pressly/tap/goose
-
-# symlink home-dir configs (zshrc / p10k live outside ~/.config)
-ln -sf ~/.config/.zshrc      ~/.zshrc
-ln -sf ~/.config/.p10k.zsh   ~/.p10k.zsh
-```
-
----
-
 <div align="center">
 
-```
-─────────────────────────────────────
-```
+<pre align="center">─────────────────────────────────────</pre>
 
 Built around Oxocarbon. Tuned by hand.
 
-```
-─────────────────────────────────────
-```
+<pre align="center">─────────────────────────────────────</pre>
 
 </div>
 
